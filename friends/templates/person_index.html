@@ -1,0 +1,15 @@
+{% extends "base2.html" %}
+
+{% block title %} {{person.name}}{% endblock %}
+
+{% block content %}
+
+{% for person in pList %}
+<div class="col-sm-3" style="background-color:lavender;">{{person.name}}</div>
+<div class="col-sm-3" style="background-color:lavenderblush;">{{person.birthday}}</div>
+<div class="col-sm-3" style="background-color:lavender;">{{person.email}}</div>
+<div class="col-sm-3" style="background-color:lavenderblush;">{{person.favouriteURL}}</div>
+
+{% endfor %}
+
+{% endblock %}

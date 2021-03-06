@@ -1,0 +1,38 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+<html>
+<head>
+    <title>Information of {% block title %}{% endblock %}</title>
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<img src="/media/Banner1.jpg" alt="python friends site photo" width=1010 height=320 />
+<body style = background-image:url("/media/bg2.jpg")>
+<div class="container-fluid">
+<h1>Python Friends List</h1>
+<hr>
+<div class="row">
+  <div class="col-sm-3" style="background-color:lavender;">Person name</div>
+  <div class="col-sm-3" style="background-color:lavenderblush;">Birthday</div>
+  <div class="col-sm-3" style="background-color:lavender;">Email</div>
+  <div class="col-sm-3" style="background-color:lavenderblush;">Favourite URL</div>
+</div>
+
+<div class="row">
+    {% block content %}
+
+    </div>
+    {% endblock %}
+
+</div>
+
+</body>
+</html>

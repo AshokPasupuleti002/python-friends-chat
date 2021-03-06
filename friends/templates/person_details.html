@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{p.name}}{% endblock %}
+
+{% block content %}
+    <td bgcolor='lightgreen'>
+        <li>Name: {{p.name}}</li>
+        <li>Birthday: {{ p.birthday }}</li>
+        <li>Gender: {{ p.gender }}</li>
+        <li>Desc: {{p.desc }}</li>
+    </td>
+    <td bgcolor='lightpink'>
+        <li>My Email: {{ p.email }}</li>
+        <li>My Favourite Website: {{ p.favouriteURL }}</li>
+    </td>
+    <td>
+        <img src= "{{p.photo.url}}" alt="My photo" width=300 height=250/>
+    </td>
+{% endblock %}

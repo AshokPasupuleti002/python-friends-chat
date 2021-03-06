@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Information of {% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<table width=95%>
+    <tr>
+    <td width=40% bgcolor="gray">
+        <font size="8" color="white">Personal Information</font>
+    </td>
+    <td width=30%, bgcolor='gray'>
+        <font size="8" color="white">Contact Information</font>
+    </td>
+    <td width=30%, bgcolor='gray'>
+        <font size="8" color="white">It's Me!</font>
+    </td>
+    </tr>
+
+    <tr>
+        {% block content %}{% endblock %}
+    </tr>
+
+</table>
+</body>
+</html>
